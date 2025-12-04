@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>College Timetable Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <header>
+            <h1>🎓 College Timetable Generator</h1>
+            <p>Create and visualize your weekly timetable easily.</p>
+        </header>
+        <main>
+            <section class="card">
+                <h2>Add a Class</h2>
+                <form id="classForm">
+                    <div class="form-row">
+                        <label for="subject">Subject</label>
+                        <input type="text" id="subject" placeholder="E.g. Data Structures" required>
+                    </div>
+                    <div class="form-row">
+                        <label for="teacher">Teacher (optional)</label>
+                        <input type="text" id="teacher" placeholder="E.g. Prof. Rahul">
+                    </div>
+                    <div class="form-row">
+                        <label for="room">Room (optional)</label>
+                        <input type="text" id="room" placeholder="E.g. CS-104">
+                    </div>
+                    <div class="form-row-inline">
+                        <div>
+                            <label for="day">Day</label>
+                            <select id="day" required>
+                                <option value="">--Select--</option>
+                                <option value="Mon">Monday</option>
+                                <option value="Tue">Tuesday</option>
+                                <option value="Wed">Wednesday</option>
+                                <option value="Thu">Thursday</option>
+                                <option value="Fri">Friday</option>
+                                <option value="Sat">Saturday</option>
+                            </select>
+                        </div>
+                        <div>
+                            <label for="slot">Time Slot</label>
+                            <select id="slot" required>
+                                <option value="">--Select--</option>
+                                <option value="9-10">9:00 - 10:00</option>
+                                <option value="10-11">10:00 - 11:00</option>
+                                <option value="11-12">11:00 - 12:00</option>
+                                <option value="12-1">12:00 - 1:00</option>
+                                <option value="1-2">1:00 - 2:00</option>
+                                <option value="2-3">2:00 - 3:00</option>
+                                <option value="3-4">3:00 - 4:00</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="buttons">
+                        <button type="submit" class="btn primary">Add to Timetable</button>
+                        <button type="button" id="clearBtn" class="btn danger">Clear Timetable</button>
+                    </div>
+                    <p id="message" class="message"></p>
+                </form>
+            </section>
+            <section class="card">
+                <h2>Weekly Timetable</h2>
+                <div class="table-container">
+                    <table id="timetable">
+                    </table>
+                </div>
+            </section>
+        </main>
+    </div>
+    <script src="script.js"></script>
+</body>
+
+</html>
